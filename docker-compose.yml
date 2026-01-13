@@ -1,0 +1,15 @@
+services:
+  wave:
+    image: yaccovs/docker-apache-wave:latest
+    build: .
+    ports:
+      - 9898:9898
+    volumes:
+      - ./data/_certificates:/incubator-retired-wave/wave/_certificates
+      - ./data/_attachments:/incubator-retired-wave/wave/_attachments
+      - ./data/_patterns:/incubator-retired-wave/wave/_patterns
+      - ./data/_accounts:/incubator-retired-wave/wave/_accounts
+      - ./data/_deltas:/incubator-retired-wave/wave/_deltas
+      - ./data/_sessions:/incubator-retired-wave/wave/_sessions
+      - ./data/_indexes:/incubator-retired-wave/wave/_indexes
+
